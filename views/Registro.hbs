@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+
+    {{> navbar}}
+    <div class="container">
+
+
+        <!--Creacion y consulta-->
+        <!-- Contact Us Section -->
+        <section class="Material-contact-section section-padding section-dark">
+            <div class="container">
+                <div class="row">
+                    <!-- Section Titile -->
+                    <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                        <h1 class="section-title">Pasos a Realizar</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Section Titile -->
+                    <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                        <p> 1.  Instalar MongoDB.<br>
+                            2.  Crear una base de datos con MongoDB.<br>
+                            3.  Instalar las dependencias (Fichero de configuración principal package.json).<br>
+                            4.  Hacer la conexión a MongoDB desde NodeJS con Mongoose. (en el index.js).<br>
+                            5.  Crear el servidor web con NodeJS. API RESTful en Node.js (en el app.js).<br>
+                            6.  Cargar el fichero app.js con la configuración de Express (en el index.js).<br>
+                            7.  Crear los esquemas y modelos.<br>
+                            8.  Crear un controlador.<br>
+                            9.  Crear la ruta para el controlador.<br>
+                            10. Importar y cargar las rutas en el servidor (app.js).<br>
+                            11. Testear mi api con Potman.<br></p>
+
+                    </div>
+                    <!-- contact form -->
+                    <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                        <form class="shake" role="form" method="post" id="contactForm" name="contact-form"
+                            data-toggle="validator" action="/registro/usuario" method="POST">
+                            <!-- Name -->
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="name">Nombre</label>
+                                <input class="form-control" id="name" type="text" name="nombre" required
+                                    data-error="Please enter your name">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- email -->
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="email">Apellido</label>
+                                <input class="form-control" id="email" type="text" name="apellido" required
+                                    data-error="Please enter your Email">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Subject -->
+                            <div class="form-group label-floating">
+                                <label class="control-label">Cedula</label>
+                                <input class="form-control" id="msg_subject" type="number" name="cedula" required
+                                    data-error="Please enter your message subject">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Message -->
+                            <div class="form-group label-floating">
+                                <label class="control-label">Email</label>
+                                <input class="form-control" id="msg_subject" type="email" name="email" required
+                                    data-error="Please enter your message subject">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <!-- Form Submit -->
+                            <div class="form-submit mt-5">
+                                <button type="submit" class="btn btn-outline-warning"> <i
+                                        class="fas fa-address-card"></i> Registrar</button>
+                                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+    {{> footer}}
+</body>
+<!-- Footer -->
+
+
+</html>

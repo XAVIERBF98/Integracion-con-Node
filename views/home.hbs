@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> head}}
+
+<body>
+
+    {{> navbar}}
+    <div class="container">
+        <!--Search-->
+        <div class="card mt-sm-5">
+            <div class="card-header" style="background-color: black;">
+                <h3 style="color: white;"> <i class="fas fa-search"></i> Consulta de Clientes </h3>
+            </div>
+            <div class="card-body">
+                <form action="/usuario/a/" method="POST">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Cedula" aria-label=""
+                            aria-describedby="basic-addon1" name="cedula">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-warning" type="submit"> <i class="fas fa-users"></i>
+                                Consultar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{# each usuario}}
+
+      <div class="mt-sm-5">
+            <table class="table">
+                <thead style="background-color: black;color: white;">
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{this.cedula}}</th>
+                        <td>{{this.nombre}}</td>
+                        <td>{{this.appellido}}</td>
+                        <td>{{this.email}}</td>
+                        <th>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-warning"><i class="fas fa-user-edit"></i> Editar</button>
+                                <button type="button" class="btn btn-outline-warning"><i class="fas fa-trash-alt"></i> Eliminar</button>
+                            </div>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+</div>
+{{> footer}}
+
+       {{/each}} 
+        <!--Spiner Consultas
+        <div class="spinner-border text-warning mt-sm-5" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>-->
+        <!--Tablas-->
+
+
+
+    
+    
+</body>
+<!-- Footer -->
+
+
+</html>
